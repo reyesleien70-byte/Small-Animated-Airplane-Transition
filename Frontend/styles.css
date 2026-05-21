@@ -1,0 +1,64 @@
+body {
+  color: darkblue;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background: lightblue ;
+}
+
+* {
+  margin:0 ;
+  padding:0 ;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100d  vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px;
+  transform: 0.2s ease;
+  margin: 21%;
+}
+
+.btn:hover {
+  transform: scale(1.5);
+}
+
+#Airplane {
+  position: fixed;
+  top: 10%;
+  left: 50px;
+  font-size: 350px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.fly-active{
+  animation: flyAcross 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0), rotate(0deg);
+  }
+  
+  50% {
+    transform: translateX(calc(100vw + 75px)) scale(1.2) rotate(-0.5deg);
+  }
+  
+  100% {
+    transform: translateX(calc(150vw + 300px)) scale(1) rotate(0deg) ;
+  }
+}
